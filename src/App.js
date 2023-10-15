@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./Components/Navbar/nav";
+import { Fragment } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.min.js";
+// import "jquery/dist/jquery.min.js";
+// import "popper.js/dist/umd/popper.min.js";
+
+import MainPage from "./Pages/MainPage";
+import RootLayOut from "./Pages/Root";
+import Category from "./Pages/Category-pages/Category";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayOut />,
+      children: [
+        {
+          path: "",
+          element: <MainPage />,
+        },
+        {
+          path: "/category/:productId",
+          element: <Category />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;

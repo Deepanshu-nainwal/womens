@@ -1,0 +1,73 @@
+.banner {
+  padding: 40px 0px;
+  margin-right: 0;
+  height: 100vh;
+  width: 100%;
+}
+.slider_img {
+  width: 100%;
+}
+.spring_summer_edits_tag,
+.featured_shop_tag,
+.this_summer_tag,
+.new_in_tag {
+  text-align: center;
+  font-size: 25px;
+  color: #495057;
+  margin: 0;
+}
+.spring_summer_edits_tag {
+  padding-top: 50px;
+}
+.featured_shop_tag {
+  padding-top: 20px;
+}
+.this_summer_tag,
+.new_in_tag {
+  padding-top: 40px;
+}
+.this_summer_pera {
+  text-align: center;
+  font-size: 16px;
+  color: #495057;
+}
+.strois_tag {
+  text-align: center;
+  font-size: 20px;
+  padding: 21px 0px;
+  color: #495057;
+}
+.featured_shop_section {
+  display: flex;
+  align-items: flex-start;
+  width: 62%;
+  margin: 25px 219px;
+  gap: 10px;
+}
+.newfoot_img {
+  width: 60%;
+}
+.vegan_img {
+  width: 50%;
+}
+.this_summer_imgs {
+  margin: auto;
+  width: 80%;
+}
+.long_img {
+  width: 100%;
+}
+.short_img {
+  width: 32%;
+  padding: 0px 8.1px;
+}
+.storis_img_div {
+  text-align: center;
+  padding: 24px 0;
+}
+.storis_img {
+  width: 65%;
+}
+.time-less_storis {
+  background-color: #fff4e6;
+}

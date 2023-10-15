@@ -1,0 +1,30 @@
+.first_crousel,
+.second_crousel,
+.third_crousel {
+  padding: 15px 0;
+  width: 75%;
+  margin: auto;
+}
+.first_crousel_product_imgs {
+  max-width: 90%;
+  padding: 10px 10px;
+}
+.first_crousel_product_img {
+  cursor: pointer;
+  width: 100%;
+}
+.first_crousel_product_name {
+  padding: 10px 12px;
+
+  margin: 0;
+  font-size: 14px;
+}
+.first_crousel_product_name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.first_crousel_product_price {
+  margin: 0;
+  font-size: 16px;
+  padding: 0 12px;
+}

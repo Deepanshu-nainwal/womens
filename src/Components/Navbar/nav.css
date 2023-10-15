@@ -1,0 +1,84 @@
+.navbar {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* overflow: hidden;
+  background-color: #dcd6d6cd;
+  position: fixed;
+  top: 0;
+  margin-bottom: 3rem; */
+}
+.nav_menu {
+  display: flex;
+}
+.women_logo {
+  height: 70px;
+  width: 100px;
+}
+
+a.navlink {
+  text-decoration: none;
+  color: #000;
+}
+.navlinks {
+  padding: 0px 26px;
+  font-size: 13.5px;
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navlink:hover {
+  cursor: pointer;
+  color: red;
+}
+.nav_icons {
+  display: flex;
+  align-items: center;
+}
+.search_bar_div {
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #80808033;
+  border-radius: 0.2rem;
+}
+.search_bar {
+  font-size: 16px;
+  padding: 8px 18px;
+  border: none;
+}
+.search_bar,
+textarea {
+  border: none;
+  outline: none;
+  /* border-bottom: 1px solid #ccc; You can adjust the color and thickness of the outline */
+}
+.logIn,
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login_text,
+.cart_text {
+  margin: 0;
+  font-size: 12px;
+}
+.icons {
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.icon_login,
+.icon_cart,
+.icon_search {
+  width: 32px;
+  cursor: pointer;
+}
+.icon_cart {
+  height: 34px;
+}
