@@ -12,9 +12,10 @@
 .product_div {
   width: 22%;
   padding: 0rem 1rem;
+}
+#product_img_box {
   position: relative;
 }
-
 .product_img {
   width: 100%;
 }
@@ -33,7 +34,8 @@
   width: 88.7%;
   height: auto;
   margin: auto;
-  bottom: 8.6rem;
+  width: 14.4%;
+  /* bottom: 1rem; */
   animation-name: example;
   animation-duration: 1s;
 }

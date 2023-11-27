@@ -5,7 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 import useHttp from "../../hooks/useHttp";
 import Loder from "../../Components/Loder/Loder";
 import "./Category.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 function Page(props) {
   const [isActive, setIsActive] = useState("");
@@ -13,6 +13,7 @@ function Page(props) {
   const [displayOnHover, setDisplayOnHover] = useState(false);
   const [isActiveOnHover, setIsActiveOnHover] = useState("");
   const { productId } = useParams();
+  const navigate = useNavigate();
   const {
     fetchData,
     fetchApi: apihandler,
@@ -40,17 +41,25 @@ function Page(props) {
     setDisplayOnHover(false);
   };
 
+  const checkoutHandler = (val) => {
+    navigate(`/checkout`, { state: { data: val } });
+  };
+
   const products =
     fetchData &&
     fetchData?.products?.map((val, i) => {
       return (
         <div
+          style={{ cursor: "pointer" }}
+          onClick={() => checkoutHandler(val)}
           onMouseOver={onHover.bind(this, val.id_product)}
           onMouseLeave={onMouseLeave}
           key={val.id_product}
           className="product_div"
         >
-          <img className="product_img" src={val.image} alt="img" />
+          <div id="product_img_box">
+            <img className="product_img" src={val.image} alt="img" />
+          </div>
           <p
             className={
               isActiveOnHover === val.id_product && displayOnHover

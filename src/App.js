@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./Pages/MainPage";
 import RootLayOut from "./Pages/Root";
 import Category from "./Pages/Category-pages/Category";
+import Checkout from "./Pages/checkout/Checkout";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/category/:productId",
           element: <Category />,
+        },
+        {
+          path: "/checkout",
+          element: <Checkout />,
         },
       ],
     },

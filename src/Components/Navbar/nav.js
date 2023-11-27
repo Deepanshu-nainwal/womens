@@ -14,15 +14,14 @@ const Nav = () => {
   useEffect(() => {
     apiHandler();
   }, []);
-  //   console.log(navData);
-  // console.log(fetchData);
+
   const productId = useParams();
   const navLink =
     fetchData &&
     fetchData.map((val) => {
       return (
         <Link
-          className="navlink"
+          className="navlink ms-2"
           to={`/category/${val.menu_url_key}`}
           key={val.source_category_id}
         >
@@ -32,35 +31,43 @@ const Nav = () => {
     });
 
   return (
-    <div className="navbar">
-      <div className="nav_menu">
-        <Link to={"/"}>
-          <img className="women_logo" src={women} alt="logo" />
-        </Link>
-        <ul className="navlinks">{navLink}</ul>
+    <>
+      <div
+        style={{ background: "#bf1616", color: "#fff" }}
+        className="font-bolder text-center text-1"
+      >
+        Free Shipping | Easy Returns | EMI Options Available
       </div>
-      <div className="nav_icons">
-        <div className="search_bar_div">
-          <input className="search_bar" type="text" placeholder="Search" />
-          <img
-            className="icon_search"
-            src="/img/icons-search.svg"
-            alt="search"
-          />
+      <div className="navbar">
+        <div className="nav_menu px-3">
+          <Link to={"/"}>
+            <img className="women_logo" src={women} alt="logo" />
+          </Link>
+          <ul className="navlinks">{navLink}</ul>
         </div>
-        <div className="icons">
-          <div className="logIn">
-            <img className="icon_login" src={logIn} alt="logIn" />
-            <p className="login_text">LOGIN</p>
+        <div className="nav_icons">
+          <div className="search_bar_div">
+            <input className="search_bar" type="text" placeholder="Search" />
+            <img
+              className="icon_search"
+              src="/img/icons-search.svg"
+              alt="search"
+            />
           </div>
-          <div className="cart">
-            <img className="icon_cart" src={cart} alt="cart" />
-            <p className="cart_text">CART</p>
+          <div className="icons">
+            <div className="logIn">
+              <img className="icon_login" src={logIn} alt="logIn" />
+              <p className="login_text">LOGIN</p>
+            </div>
+            <div className="cart">
+              <img className="icon_cart" src={cart} alt="cart" />
+              <p className="cart_text">CART</p>
+            </div>
           </div>
         </div>
+        {/* <LogIn /> */}
       </div>
-      {/* <LogIn /> */}
-    </div>
+    </>
   );
 };
 export default Nav;

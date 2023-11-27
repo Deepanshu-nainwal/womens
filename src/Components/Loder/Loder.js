@@ -2,9 +2,16 @@ import React from "react";
 import "./Loder.css";
 function Loder() {
   return (
-    <span className="loder_span">
-      <img className="loder_img" src="/img/loder.gif" alt="loder" />
-    </span>
+    <div style={{ maxHeight: "80vh" }}>
+      <span className="loder_span">
+        <img
+          style={{ width: "77px" }}
+          className="loder_img"
+          src="/img/loder.gif"
+          alt="loder"
+        />
+      </span>
+    </div>
     // <div class="d-flex justify-content-center">
     //   <div class="spinner-border" role="status">
     //     <span class="sr-only">Loading...</span>
